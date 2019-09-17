@@ -1,0 +1,70 @@
+import React from 'react';
+//import PropTypes from 'prop-types';
+
+//return 이 존재하지 않음
+//render 메소드가 존재
+
+
+/*
+React.Component는 다른 LifeCycle이 존재함
+mounting 
+updating
+unmounting (component 죽는거)
+*/
+
+class App extends React.Component{      
+
+    constructor(props){     //javascript 특성 props는 무시해도 됨
+        super(props);
+        console.log("hello");       //생성자가 먼저 호출됨.
+    }
+
+    state = { 
+        count: 0
+    };
+    // setState 를 호출할때마다 react는 rerender  한다. 무조건 setState를 호출할 때만.
+    add = () => {
+        //set에 바로 접근하면 안됨 ㅇthis.state.count =1 이렇게 하면 안됨  Do not mutate state directly
+        //setState() 사용 
+        this.setState(current => ({count: current.count +1}));
+        //setState를 사용하지 않으면  render function 작동이 안됨.
+        //main system failure 와 이전 
+    };
+    minus = () => {
+        this.setState(current => ({count:current.count -1}));
+        // 보안상 이게 더 나은 방법 일종의 (getState setState (자바와 비슷))
+        // this.state.count +1 보다 나은 방법
+    };
+ 
+    componentDidMount(){
+
+        console.log("component rendered");
+
+    }
+    componentDidUpdate(){ //setState -> render -> componentDidUpdate
+        console.log("I just updated");
+    }
+
+    componentWillUnmount(){     //Component 종료 될때 호출됨.
+        console.log("Goodbye");
+    }
+    render(){
+        console.log("Im rendering");
+        //react 의 경우 onClick이 automatic 하게 가지고 있음 eventListener가 필요 없음
+        return (
+            <div>
+                 <h1> The number is:  {this.state.count}</h1>
+                <button onClick={this.add}>Add</button>
+                <button onClick={this.minus}>Minus</button>
+            </div>
+        );
+    }
+    // react는 자동적으로 class component 의 render()를 실행함
+}
+
+
+
+//key 값은 react 내부에서 사용하기 위함임
+
+//prop라는 fav를 
+export default App;
