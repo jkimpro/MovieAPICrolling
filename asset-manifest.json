@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jays_app_2019/static/css/main.5721af45.chunk.css",
+    "main.js": "/jays_app_2019/static/js/main.e339962b.chunk.js",
+    "main.js.map": "/jays_app_2019/static/js/main.e339962b.chunk.js.map",
+    "runtime~main.js": "/jays_app_2019/static/js/runtime~main.cb36b050.js",
+    "runtime~main.js.map": "/jays_app_2019/static/js/runtime~main.cb36b050.js.map",
+    "static/js/2.551da2b5.chunk.js": "/jays_app_2019/static/js/2.551da2b5.chunk.js",
+    "static/js/2.551da2b5.chunk.js.map": "/jays_app_2019/static/js/2.551da2b5.chunk.js.map",
+    "index.html": "/jays_app_2019/index.html",
+    "precache-manifest.e0b8a868a0f752dbc73b70fd546bda17.js": "/jays_app_2019/precache-manifest.e0b8a868a0f752dbc73b70fd546bda17.js",
+    "service-worker.js": "/jays_app_2019/service-worker.js",
+    "static/css/main.5721af45.chunk.css.map": "/jays_app_2019/static/css/main.5721af45.chunk.css.map"
+  }
+}
